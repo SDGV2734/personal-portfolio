@@ -227,8 +227,9 @@
 			$.ajax({      	
 
 		      type: "POST",
-		      url: "sonamdorjighalley2002@gmail.com",
+		      url: "https://formspree.io/f/xeojdezv",
 		      data: $(form).serialize(),
+			  datartype: "json",
 		      beforeSend: function() { 
 
 		      	sLoader.fadeIn(); 
@@ -236,33 +237,29 @@
 		      },
 		      success: function(msg) {
 
-	            // Message was sent
-	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').hide();
-	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
-	            }
-	            // There was an error
-	            else {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').html(msg);
-		            $('#message-warning').fadeIn();
-	            }
-
-		      },
-		      error: function() {
-
-		      	sLoader.fadeOut(); 
-		      	$('#message-warning').html("Something went wrong. Please try again.");
-		         $('#message-warning').fadeIn();
-
-		      }
-
-	      });     		
-  		}
-
-	});
+				  sLoader.fadeOut(); 
+				 $('#message-warning').hide();
+				 $('#contactForm').fadeOut();
+				 $('#message-success').fadeIn();
+				  
+	            
+				},
+				error: function() {
+  
+					sLoader.fadeOut(); 
+					$('#message-warning').html("Thank you for your reponse.");
+				   $('#message-warning').fadeIn();
+  
+				}
+  
+			});     		
+			}
+  
+	  });
+	            
+				  
+	            
+	            
 
 
  	/*----------------------------------------------------- */
